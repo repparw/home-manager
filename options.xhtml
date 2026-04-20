@@ -61,6 +61,9 @@ the <code class="option">nixpkgs.pkgs</code> option.</p></li></ul></div>
 <p><span class="emphasis"><em>Type:</em></span>
 lazy attribute set of raw value</p>
 
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">{ }
+</code></pre>
+
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
@@ -3483,6 +3486,9 @@ then this is set to
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or string</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">null
+</code></pre>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -11848,7 +11854,7 @@ list of package</p>
 <p><span class="emphasis"><em>Type:</em></span>
 package</p>
 
-<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">&lt;derivation fcitx5-with-addons-5.1.16&gt;
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">&lt;derivation fcitx5-with-addons-5.1.19&gt;
 </code></pre>
 
 <p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">pkgs.kdePackages.fcitx5-with-addons
@@ -14676,7 +14682,7 @@ boolean</p>
 This option should be defined at most once per module.</p><p>The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-list of (maintainer)</p>
+list of lib.maintainers</p>
 
 <p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
 </code></pre>
@@ -14687,8 +14693,36 @@ list of (maintainer)</p>
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
-<code class="filename"><a class="filename"  href="file:///nix/store/4bd9gc8m9flqffmbf4mncqv4sxk1nzqj-source/modules/generic/meta-maintainers.nix" target="_top">
-/nix/store/4bd9gc8m9flqffmbf4mncqv4sxk1nzqj-source/modules/generic/meta-maintainers.nix
+<code class="filename"><a class="filename"  href="file:///nix/store/m9k87k3yi7z8mmrnvnyajqc28i0mqgg2-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/m9k87k3yi7z8mmrnvnyajqc28i0mqgg2-source/modules/generic/meta-maintainers.nix
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-meta.teams"></a><a class="term" href="options.xhtml#opt-meta.teams"><code class="option">meta.teams</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>List of team maintainers of each module.
+This option should be defined at most once per module.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+list of lib.teams</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
+</code></pre>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">[ lib.teams.acme lib.teams.haskell ]
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="file:///nix/store/m9k87k3yi7z8mmrnvnyajqc28i0mqgg2-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/m9k87k3yi7z8mmrnvnyajqc28i0mqgg2-source/modules/generic/meta-maintainers.nix
 </a></code>
 </td></tr>
 </table>
@@ -15489,6 +15523,9 @@ null or (attribute set)</p>
 <p><span class="emphasis"><em>Type:</em></span>
 attribute set of (string or signed integer or boolean or package)</p>
 
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">{ }
+</code></pre>
+
 <p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">{
   id = &quot;nixpkgs&quot;;
   type = &quot;indirect&quot;;
@@ -15515,6 +15552,9 @@ attribute set of (string or signed integer or boolean or package)</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 attribute set of (string or signed integer or boolean or package)</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">{ }
+</code></pre>
 
 <p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">{
   owner = &quot;my-org&quot;;
@@ -18064,6 +18104,9 @@ hidden from view, if the key translated is set to
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or string</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">null
+</code></pre>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -23867,6 +23910,9 @@ each with its own source directories and repositories.</p>
 <p><span class="emphasis"><em>Type:</em></span>
 attribute set of (submodule)</p>
 
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">{ }
+</code></pre>
+
 <p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">{
   personal = {
     location = {
@@ -24137,6 +24183,9 @@ null or (list of string)</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 list of (string or (submodule))</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
+</code></pre>
 
 <p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">[
   {
@@ -26490,6 +26539,9 @@ null or string</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or package <span class="emphasis"><em>(read only)</em></span></p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">null
+</code></pre>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -31625,6 +31677,9 @@ null or string</p>
 <p><span class="emphasis"><em>Type:</em></span>
 null or package <span class="emphasis"><em>(read only)</em></span></p>
 
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">null
+</code></pre>
+
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
@@ -31863,7 +31918,7 @@ boolean</p>
 This option should be defined at most once per module.</p><p>The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-list of (maintainer)</p>
+list of lib.maintainers</p>
 
 <p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
 </code></pre>
@@ -31874,8 +31929,36 @@ list of (maintainer)</p>
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
-<code class="filename"><a class="filename"  href="file:///nix/store/4bd9gc8m9flqffmbf4mncqv4sxk1nzqj-source/modules/generic/meta-maintainers.nix" target="_top">
-/nix/store/4bd9gc8m9flqffmbf4mncqv4sxk1nzqj-source/modules/generic/meta-maintainers.nix
+<code class="filename"><a class="filename"  href="file:///nix/store/m9k87k3yi7z8mmrnvnyajqc28i0mqgg2-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/m9k87k3yi7z8mmrnvnyajqc28i0mqgg2-source/modules/generic/meta-maintainers.nix
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.firefox.profiles._name_.bookmarks.meta.teams"></a><a class="term" href="options.xhtml#opt-programs.firefox.profiles._name_.bookmarks.meta.teams"><code class="option">programs.firefox.profiles.&lt;name&gt;.bookmarks.meta.teams</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>List of team maintainers of each module.
+This option should be defined at most once per module.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+list of lib.teams</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
+</code></pre>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">[ lib.teams.acme lib.teams.haskell ]
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="file:///nix/store/m9k87k3yi7z8mmrnvnyajqc28i0mqgg2-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/m9k87k3yi7z8mmrnvnyajqc28i0mqgg2-source/modules/generic/meta-maintainers.nix
 </a></code>
 </td></tr>
 </table>
@@ -32694,7 +32777,7 @@ boolean</p>
 This option should be defined at most once per module.</p><p>The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-list of (maintainer)</p>
+list of lib.maintainers</p>
 
 <p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
 </code></pre>
@@ -32705,8 +32788,36 @@ list of (maintainer)</p>
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
-<code class="filename"><a class="filename"  href="file:///nix/store/4bd9gc8m9flqffmbf4mncqv4sxk1nzqj-source/modules/generic/meta-maintainers.nix" target="_top">
-/nix/store/4bd9gc8m9flqffmbf4mncqv4sxk1nzqj-source/modules/generic/meta-maintainers.nix
+<code class="filename"><a class="filename"  href="file:///nix/store/m9k87k3yi7z8mmrnvnyajqc28i0mqgg2-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/m9k87k3yi7z8mmrnvnyajqc28i0mqgg2-source/modules/generic/meta-maintainers.nix
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.firefox.profiles._name_.search.meta.teams"></a><a class="term" href="options.xhtml#opt-programs.firefox.profiles._name_.search.meta.teams"><code class="option">programs.firefox.profiles.&lt;name&gt;.search.meta.teams</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>List of team maintainers of each module.
+This option should be defined at most once per module.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+list of lib.teams</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
+</code></pre>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">[ lib.teams.acme lib.teams.haskell ]
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="file:///nix/store/m9k87k3yi7z8mmrnvnyajqc28i0mqgg2-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/m9k87k3yi7z8mmrnvnyajqc28i0mqgg2-source/modules/generic/meta-maintainers.nix
 </a></code>
 </td></tr>
 </table>
@@ -34391,6 +34502,9 @@ null or string</p>
 <p><span class="emphasis"><em>Type:</em></span>
 null or package <span class="emphasis"><em>(read only)</em></span></p>
 
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">null
+</code></pre>
+
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
@@ -34629,7 +34743,7 @@ boolean</p>
 This option should be defined at most once per module.</p><p>The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-list of (maintainer)</p>
+list of lib.maintainers</p>
 
 <p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
 </code></pre>
@@ -34640,8 +34754,36 @@ list of (maintainer)</p>
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
-<code class="filename"><a class="filename"  href="file:///nix/store/4bd9gc8m9flqffmbf4mncqv4sxk1nzqj-source/modules/generic/meta-maintainers.nix" target="_top">
-/nix/store/4bd9gc8m9flqffmbf4mncqv4sxk1nzqj-source/modules/generic/meta-maintainers.nix
+<code class="filename"><a class="filename"  href="file:///nix/store/m9k87k3yi7z8mmrnvnyajqc28i0mqgg2-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/m9k87k3yi7z8mmrnvnyajqc28i0mqgg2-source/modules/generic/meta-maintainers.nix
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.floorp.profiles._name_.bookmarks.meta.teams"></a><a class="term" href="options.xhtml#opt-programs.floorp.profiles._name_.bookmarks.meta.teams"><code class="option">programs.floorp.profiles.&lt;name&gt;.bookmarks.meta.teams</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>List of team maintainers of each module.
+This option should be defined at most once per module.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+list of lib.teams</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
+</code></pre>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">[ lib.teams.acme lib.teams.haskell ]
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="file:///nix/store/m9k87k3yi7z8mmrnvnyajqc28i0mqgg2-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/m9k87k3yi7z8mmrnvnyajqc28i0mqgg2-source/modules/generic/meta-maintainers.nix
 </a></code>
 </td></tr>
 </table>
@@ -35460,7 +35602,7 @@ boolean</p>
 This option should be defined at most once per module.</p><p>The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-list of (maintainer)</p>
+list of lib.maintainers</p>
 
 <p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
 </code></pre>
@@ -35471,8 +35613,36 @@ list of (maintainer)</p>
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
-<code class="filename"><a class="filename"  href="file:///nix/store/4bd9gc8m9flqffmbf4mncqv4sxk1nzqj-source/modules/generic/meta-maintainers.nix" target="_top">
-/nix/store/4bd9gc8m9flqffmbf4mncqv4sxk1nzqj-source/modules/generic/meta-maintainers.nix
+<code class="filename"><a class="filename"  href="file:///nix/store/m9k87k3yi7z8mmrnvnyajqc28i0mqgg2-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/m9k87k3yi7z8mmrnvnyajqc28i0mqgg2-source/modules/generic/meta-maintainers.nix
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.floorp.profiles._name_.search.meta.teams"></a><a class="term" href="options.xhtml#opt-programs.floorp.profiles._name_.search.meta.teams"><code class="option">programs.floorp.profiles.&lt;name&gt;.search.meta.teams</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>List of team maintainers of each module.
+This option should be defined at most once per module.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+list of lib.teams</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
+</code></pre>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">[ lib.teams.acme lib.teams.haskell ]
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="file:///nix/store/m9k87k3yi7z8mmrnvnyajqc28i0mqgg2-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/m9k87k3yi7z8mmrnvnyajqc28i0mqgg2-source/modules/generic/meta-maintainers.nix
 </a></code>
 </td></tr>
 </table>
@@ -38419,6 +38589,9 @@ null or boolean</p>
 <p><span class="emphasis"><em>Type:</em></span>
 null or string</p>
 
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">null
+</code></pre>
+
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
@@ -39567,6 +39740,9 @@ string</p>
 <p><span class="emphasis"><em>Type:</em></span>
 list of string</p>
 
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
+</code></pre>
+
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
@@ -40624,6 +40800,9 @@ in
 
 <p><span class="emphasis"><em>Type:</em></span>
 attribute set of (string or boolean or list of string)</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">{ }
+</code></pre>
 
 <p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">{
   no-comments = false;
@@ -43442,6 +43621,9 @@ package</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 attribute set of (DAG of attribute set of (INI atom (null, int, bool, string, or float)))</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">{ }
+</code></pre>
 
 <p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">{
   top = {
@@ -47898,6 +48080,9 @@ strings concatenated with “\n”</p>
 <p><span class="emphasis"><em>Type:</em></span>
 null or package <span class="emphasis"><em>(read only)</em></span></p>
 
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">null
+</code></pre>
+
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
@@ -51678,6 +51863,9 @@ null or string</p>
 <p><span class="emphasis"><em>Type:</em></span>
 null or package <span class="emphasis"><em>(read only)</em></span></p>
 
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">null
+</code></pre>
+
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
@@ -51916,7 +52104,7 @@ boolean</p>
 This option should be defined at most once per module.</p><p>The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-list of (maintainer)</p>
+list of lib.maintainers</p>
 
 <p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
 </code></pre>
@@ -51927,8 +52115,36 @@ list of (maintainer)</p>
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
-<code class="filename"><a class="filename"  href="file:///nix/store/4bd9gc8m9flqffmbf4mncqv4sxk1nzqj-source/modules/generic/meta-maintainers.nix" target="_top">
-/nix/store/4bd9gc8m9flqffmbf4mncqv4sxk1nzqj-source/modules/generic/meta-maintainers.nix
+<code class="filename"><a class="filename"  href="file:///nix/store/m9k87k3yi7z8mmrnvnyajqc28i0mqgg2-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/m9k87k3yi7z8mmrnvnyajqc28i0mqgg2-source/modules/generic/meta-maintainers.nix
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.librewolf.profiles._name_.bookmarks.meta.teams"></a><a class="term" href="options.xhtml#opt-programs.librewolf.profiles._name_.bookmarks.meta.teams"><code class="option">programs.librewolf.profiles.&lt;name&gt;.bookmarks.meta.teams</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>List of team maintainers of each module.
+This option should be defined at most once per module.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+list of lib.teams</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
+</code></pre>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">[ lib.teams.acme lib.teams.haskell ]
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="file:///nix/store/m9k87k3yi7z8mmrnvnyajqc28i0mqgg2-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/m9k87k3yi7z8mmrnvnyajqc28i0mqgg2-source/modules/generic/meta-maintainers.nix
 </a></code>
 </td></tr>
 </table>
@@ -52747,7 +52963,7 @@ boolean</p>
 This option should be defined at most once per module.</p><p>The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-list of (maintainer)</p>
+list of lib.maintainers</p>
 
 <p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
 </code></pre>
@@ -52758,8 +52974,36 @@ list of (maintainer)</p>
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
-<code class="filename"><a class="filename"  href="file:///nix/store/4bd9gc8m9flqffmbf4mncqv4sxk1nzqj-source/modules/generic/meta-maintainers.nix" target="_top">
-/nix/store/4bd9gc8m9flqffmbf4mncqv4sxk1nzqj-source/modules/generic/meta-maintainers.nix
+<code class="filename"><a class="filename"  href="file:///nix/store/m9k87k3yi7z8mmrnvnyajqc28i0mqgg2-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/m9k87k3yi7z8mmrnvnyajqc28i0mqgg2-source/modules/generic/meta-maintainers.nix
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.librewolf.profiles._name_.search.meta.teams"></a><a class="term" href="options.xhtml#opt-programs.librewolf.profiles._name_.search.meta.teams"><code class="option">programs.librewolf.profiles.&lt;name&gt;.search.meta.teams</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>List of team maintainers of each module.
+This option should be defined at most once per module.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+list of lib.teams</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
+</code></pre>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">[ lib.teams.acme lib.teams.haskell ]
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="file:///nix/store/m9k87k3yi7z8mmrnvnyajqc28i0mqgg2-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/m9k87k3yi7z8mmrnvnyajqc28i0mqgg2-source/modules/generic/meta-maintainers.nix
 </a></code>
 </td></tr>
 </table>
@@ -58341,6 +58585,9 @@ strings concatenated with “\n” <span class="emphasis"><em>(read only)</em></
 
 <p><span class="emphasis"><em>Type:</em></span>
 attribute set of strings concatenated with “\n” <span class="emphasis"><em>(read only)</em></span></p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">{ }
+</code></pre>
 
 <p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">{
   viml = &#x27;&#x27;
@@ -71385,6 +71632,9 @@ null or boolean</p>
 <p><span class="emphasis"><em>Type:</em></span>
 list of string</p>
 
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
+</code></pre>
+
 <p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">[
   &quot;pdf&quot;
 ]
@@ -73444,6 +73694,9 @@ package</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 open submodule of attribute set of anything</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">{ }
+</code></pre>
 
 <p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">{
   address = &quot;libera.chat:6697&quot;;
@@ -75721,6 +75974,9 @@ null or (list of string)</p>
 <p><span class="emphasis"><em>Type:</em></span>
 list of (submodule)</p>
 
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
+</code></pre>
+
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
@@ -77136,6 +77392,9 @@ list of (submodule)</p>
 <p><span class="emphasis"><em>Type:</em></span>
 submodule</p>
 
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">{ }
+</code></pre>
+
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
@@ -77210,6 +77469,9 @@ null or 16 bit unsigned integer; between 0 and 65535 (both inclusive)</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 submodule</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">{ }
+</code></pre>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -77427,6 +77689,9 @@ list of (submodule)</p>
 <p><span class="emphasis"><em>Type:</em></span>
 submodule</p>
 
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">{ }
+</code></pre>
+
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
@@ -77501,6 +77766,9 @@ null or 16 bit unsigned integer; between 0 and 65535 (both inclusive)</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 submodule</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">{ }
+</code></pre>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -81203,6 +81471,9 @@ list of package</p>
 <p><span class="emphasis"><em>Type:</em></span>
 attribute set of (submodule)</p>
 
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">{ }
+</code></pre>
+
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
@@ -81606,7 +81877,7 @@ boolean</p>
 This option should be defined at most once per module.</p><p>The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-list of (maintainer)</p>
+list of lib.maintainers</p>
 
 <p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
 </code></pre>
@@ -81617,8 +81888,36 @@ list of (maintainer)</p>
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
-<code class="filename"><a class="filename"  href="file:///nix/store/4bd9gc8m9flqffmbf4mncqv4sxk1nzqj-source/modules/generic/meta-maintainers.nix" target="_top">
-/nix/store/4bd9gc8m9flqffmbf4mncqv4sxk1nzqj-source/modules/generic/meta-maintainers.nix
+<code class="filename"><a class="filename"  href="file:///nix/store/m9k87k3yi7z8mmrnvnyajqc28i0mqgg2-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/m9k87k3yi7z8mmrnvnyajqc28i0mqgg2-source/modules/generic/meta-maintainers.nix
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.thunderbird.profiles._name_.search.meta.teams"></a><a class="term" href="options.xhtml#opt-programs.thunderbird.profiles._name_.search.meta.teams"><code class="option">programs.thunderbird.profiles.&lt;name&gt;.search.meta.teams</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>List of team maintainers of each module.
+This option should be defined at most once per module.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+list of lib.teams</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
+</code></pre>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">[ lib.teams.acme lib.teams.haskell ]
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="file:///nix/store/m9k87k3yi7z8mmrnvnyajqc28i0mqgg2-source/modules/generic/meta-maintainers.nix" target="_top">
+/nix/store/m9k87k3yi7z8mmrnvnyajqc28i0mqgg2-source/modules/generic/meta-maintainers.nix
 </a></code>
 </td></tr>
 </table>
@@ -98753,6 +99052,9 @@ JSON value</p>
 <p><span class="emphasis"><em>Type:</em></span>
 list of (one of “audio”, “backlight”, “battery”, “cpu_load”, “network”, “time”)</p>
 
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
+</code></pre>
+
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
@@ -99908,6 +100210,9 @@ list of package</p>
 <p><span class="emphasis"><em>Type:</em></span>
 YAML 1.1 value</p>
 
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">null
+</code></pre>
+
 <p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">{
   threshold = {
     swipe = 0.1;
@@ -100408,6 +100713,9 @@ package</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 attribute set of (submodule)</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">{ }
+</code></pre>
 
 <p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">{
   xyz = {
@@ -101164,6 +101472,9 @@ null or package</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or string</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">null
+</code></pre>
 
 <p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">&quot;pinentry-wayprompt&quot;
 </code></pre>
@@ -103889,6 +104200,9 @@ string</p>
 <p><span class="emphasis"><em>Type:</em></span>
 submodule</p>
 
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">{ }
+</code></pre>
+
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
@@ -104049,6 +104363,9 @@ null or one of “normal”, “90”, “180”, “270”, “flipped”, “f
 
 <p><span class="emphasis"><em>Type:</em></span>
 submodule</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">{ }
+</code></pre>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -107013,6 +107330,9 @@ attribute set of (submodule)</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or string</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">null
+</code></pre>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -120405,6 +120725,9 @@ attribute set of (string or list of string)</p>
 <p><span class="emphasis"><em>Type:</em></span>
 list of string of length 2</p>
 
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">[ ]
+</code></pre>
+
 <p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">[
   &quot;/home/user/documents&quot;
   &quot;ssh://remote/documents&quot;
@@ -122370,6 +122693,9 @@ The command is automatically escaped.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 null or string</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">null
+</code></pre>
 
 <p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">${pkgs.libnotify}/bin/notify-send &quot;Idle&quot; &quot;Sleeping in 1 minute&quot;
 
@@ -130953,6 +131279,9 @@ criteria (which is different from an empty string criteria).</p>
 <p><span class="emphasis"><em>Type:</em></span>
 attribute set of (string or boolean)</p>
 
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">{ }
+</code></pre>
+
 <p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">{
   title = &quot;x200: ~/work&quot;;
   floating = true;
@@ -134776,6 +135105,9 @@ boolean</p>
 <p><span class="emphasis"><em>Type:</em></span>
 submodule</p>
 
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">{ }
+</code></pre>
+
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
@@ -134796,6 +135128,9 @@ submodule</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 submodule</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">{ }
+</code></pre>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -134818,6 +135153,9 @@ submodule</p>
 <p><span class="emphasis"><em>Type:</em></span>
 submodule</p>
 
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">{ }
+</code></pre>
+
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
 <tr><td>
@@ -134838,6 +135176,9 @@ submodule</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 submodule</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">{ }
+</code></pre>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -138489,6 +138830,9 @@ criteria (which is different from an empty string criteria).</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 attribute set of (string or boolean)</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting nix">{ }
+</code></pre>
 
 <p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting nix">{
   title = &quot;x200: ~/work&quot;;
