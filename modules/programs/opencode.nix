@@ -501,6 +501,10 @@ in
           ExecStart = "${lib.getExe cfg.package} web ${lib.escapeShellArgs webCfg.extraArgs}";
           Restart = "always";
           RestartSec = 5;
+          Environment = [
+            "PATH=${config.home.profileDirectory}/bin"
+            "SHELL=/usr/bin/env bash"
+          ];
         };
 
         Install = {
@@ -524,6 +528,10 @@ in
           };
           ProcessType = "Background";
           RunAtLoad = true;
+          EnvironmentVariables = {
+            PATH = "${config.home.profileDirectory}/bin:/usr/bin:/bin:/usr/sbin:/sbin";
+            SHELL = "/usr/bin/env bash";
+          };
         };
       };
     };
